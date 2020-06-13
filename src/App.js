@@ -5,28 +5,19 @@ import Home from './pages/Home'
 import Rooms from './pages/Rooms'
 import SingleRoom from './pages/SingleRoom'
 import Error from './pages/Error'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
     <>
     
     <Router >
-      <div className="nav-center ">
-        <Link className = "nav-links" to="/"><img src="./images/logo.svg" alt=""></img></Link>
-      </div>
-    <NavLink to = '/' >
-      <ul className="nav-btn">
-          <li >
-          
-          </li>
-      </ul>
-         
-    </NavLink>
+      <Navbar />
     <Switch>
-      <Route exact path="/"><Home /></Route>
-      <Route exact path="/rooms"><Rooms /></Route>
-      <Route exact path="/rooms/singleRoom/:slug">< SingleRoom /></Route>
-      <Route exact path='' >< Error /></Route>
+      <Route exact path="/" component={Home} />
+      <Route exact path="/rooms" component={Rooms} />
+      <Route exact path="/rooms/singleRoom/:slug" component={SingleRoom} />
+      <Route exact path='' component={Error} />
     </Switch>
     
     </Router>
