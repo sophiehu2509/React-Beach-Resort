@@ -7,6 +7,6 @@ export default function Hero({children, hero}) {
     )
 }
 
-Hero.defaultValue = {
+Hero.defaultProps = {
     hero:'defaultHero'
 }
