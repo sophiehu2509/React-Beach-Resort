@@ -32,6 +32,7 @@ export default class RoomProvider extends Component {
                 id,
                 images:images
             }
+            console.log(room)
             return room;
         });
         return tempItem;
