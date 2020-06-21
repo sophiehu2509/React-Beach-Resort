@@ -32,13 +32,18 @@ export default class RoomProvider extends Component {
                 id,
                 images:images
             }
-            console.log(room)
+
             return room;
         });
         return tempItem;
     }
 
-
+    getRoom = (slug) => {
+        console.log("sss")
+        let tempRooms = [...this.state.rooms];
+        const room = tempRooms.find((room) => room.slug === slug);
+        return room;
+    }
     render() {
         return (
             <RoomContext.Provider value={{...this.state}}>

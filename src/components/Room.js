@@ -5,7 +5,6 @@ import PropTypes from 'prop-types'
 
 export default class Room extends Component{
 
-
     render() {
         return (
             <article className="room">
