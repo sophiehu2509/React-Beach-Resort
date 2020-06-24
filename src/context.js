@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import items from './data'
 
+
 const RoomContext = React.createContext();
 
 export default class RoomProvider extends Component {
@@ -55,5 +56,18 @@ export default class RoomProvider extends Component {
 }
 
 const RoomConsumer = RoomContext.Consumer;
+export function withRoomConsumer(component){
+    return function ConsumerWrapper(props){
+        
+            return <RoomConsumer>
+            {
+                value =>
+                 
+                        <Component {...props} context={value}/>
 
+            }
+          </RoomConsumer>
+    
+    }
+}
 export {RoomProvider, RoomConsumer, RoomContext}
