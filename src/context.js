@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import items from './data'
-
+import RoomFilter from './components/RoomFilter'
+import RoomList from './components/RoomList'
+import Loading from './components/Loading';
 
 const RoomContext = React.createContext();
 
@@ -62,6 +64,20 @@ export function withRoomConsumer(component){
             return <RoomConsumer>
             {
                 value =>
+                // {
+                //     const {loading, sortedRooms, rooms} = value;
+   
+                //     if(loading){
+                //         return <Loading />
+                //     }
+                //     return(
+                //         <div>
+                //             <Component {...props} context={value}/>
+                //             <RoomFilter rooms={rooms}/>
+                //             <RoomList rooms={sortedRooms}/>
+                //         </div>
+                //     )
+                // }
                  
                         <Component {...props} context={value}/>
 

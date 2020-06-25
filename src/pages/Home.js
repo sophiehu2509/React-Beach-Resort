@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom'
 import Services from '../components/Services'
 import FeaturedRooms from '../components/FeaturedRooms'
 
+
 export default class Home extends Component {
     render() {
         return (
