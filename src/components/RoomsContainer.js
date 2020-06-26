@@ -4,40 +4,53 @@ import RoomList from './RoomList'
 import {withRoomConsumer, RoomConsumer} from '../context'
 import Loading from './Loading';
 
-// const A = withRoomConsumer(RoomsContainer);
-// function RoomsContainer({context}){
-//     // console.log(context)
-//     // const {loading, sortedRooms, rooms} = context;
+function V({context} ){
+    return(
+        <div>
+           
+     
+        </div>
+    )
+}
+const A = withRoomConsumer(V);
+export default function RoomsContainer(){
+    // console.log(context)
+    // const {loading, sortedRooms, rooms} = context;
    
-//     // if(loading){
-//     //     return <Loading />
-//     // }
-//     return(
-//         <div>
-//             {/* <RoomFilter rooms={rooms}/>
-//             <RoomList rooms={sortedRooms}/> */}
-//             {/* <RoomFilter />
-//             <RoomList /> */}
-//         </div>
-//     )
+    // if(loading){
+    //     return <Loading />
+    // }
+    console.log(A)
+    return(
+        <div>
+            {/* <RoomFilter rooms={rooms}/>
+            <RoomList rooms={sortedRooms}/> */}
+            {/* <RoomFilter />
+            <RoomList /> */}
+            <V />
+        </div>
+    )
     
 
-// };
+};
 
 
 
-class RoomsContainer extends Component {
-    render() {
-        return (
-            <div>
+// class RoomsContainer extends Component {
+//     componentDidMount(){
+//         console.log("333")
+//     }
+//     render() {
+//         return (
+//             <div>
                 
-            </div>
-        )
-    }
-}
+//             </div>
+//         )
+//     }
+// }
 
 
-export default withRoomConsumer(RoomsContainer)
+// export default withRoomConsumer(RoomsContainer)
 
 // export default withRoomConsumer(RoomsContainer);
 

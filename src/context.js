@@ -61,28 +61,39 @@ const RoomConsumer = RoomContext.Consumer;
 export function withRoomConsumer(component){
     return function ConsumerWrapper(props){
         
-            return <RoomConsumer>
-            {
-                value =>
-                // {
-                //     const {loading, sortedRooms, rooms} = value;
-   
-                //     if(loading){
-                //         return <Loading />
-                //     }
-                //     return(
-                //         <div>
-                //             <Component {...props} context={value}/>
-                //             <RoomFilter rooms={rooms}/>
-                //             <RoomList rooms={sortedRooms}/>
-                //         </div>
-                //     )
-                // }
-                 
-                        <Component {...props} context={value}/>
-
-            }
-          </RoomConsumer>
+            return(
+                <RoomConsumer>
+                {
+                    value =>{
+                        console.log( <Component />)
+                        return (
+                            <div>
+                                <Component />
+                                
+                            </div>
+                            // <Component {...props} context={value}/>
+                        )
+                    }
+                    // {
+                    //     const {loading, sortedRooms, rooms} = value;
+       
+                    //     if(loading){
+                    //         return <Loading />
+                    //     }
+                    //     return(
+                    //         <div>
+                    //             <Component {...props} context={value}/>
+                    //             <RoomFilter rooms={rooms}/>
+                    //             <RoomList rooms={sortedRooms}/>
+                    //         </div>
+                    //     )
+                    // }
+                     
+                            
+    
+                }
+              </RoomConsumer>
+            )
     
     }
 }
